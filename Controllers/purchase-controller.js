@@ -53,7 +53,7 @@ const updateTransactionStatus = async (req, res, next) => {
         //These below declarations must be made here itself to get the updated isPremiumUser status, if we make it above we will get old value which was null
         const userId = req.user.id
         const name = req.user.name
-        const isPremiumUser = req.user.isPremiumUser 
+        const isPremiumUser = true 
 
         Promise.all([promise1, promise2]).then(async ()=> {
             await t.commit()
